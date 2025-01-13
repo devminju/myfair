@@ -6,6 +6,7 @@ type Props = {
   keydownHandler: (e: React.KeyboardEvent<HTMLInputElement>) => void;
   placeholder: string;
   errorMessage?: string;
+  helperMessage?: string;
   disabled?: boolean;
 };
 
@@ -15,10 +16,11 @@ export default function TextField({
   keydownHandler,
   placeholder,
   errorMessage,
+  helperMessage,
   disabled = true,
 }: Props) {
   return (
-    <>
+    <div>
       <StyledInput
         type="text"
         value={value}
@@ -28,13 +30,15 @@ export default function TextField({
         disabled={disabled}
       />
       {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
-    </>
+      {helperMessage && <HelperMessage>{helperMessage}</HelperMessage>}
+    </div>
   );
 }
 
 const StyledInput = styled.input`
   width: 737px;
-  height: 92px;
+  height: auto;
+  min-height: 92px;
   padding: 32px;
   border: none;
   border-radius: 24px;
@@ -56,4 +60,11 @@ const ErrorMessage = styled.span`
   padding: 5px 20px;
   font-size: 16px;
   color: #ff0000;
+`;
+
+const HelperMessage = styled.span`
+  display: block;
+  padding: 5px 20px;
+  font-size: 16px;
+  color: gray;
 `;

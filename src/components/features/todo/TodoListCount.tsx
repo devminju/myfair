@@ -7,9 +7,6 @@ export default function TodoListCount() {
   const count = useRecoilValue(todoListStatsState);
   const filter = useRecoilValue(todoListFilterState);
 
-  console.log("count", count);
-  console.log("filter", filter);
-
   return (
     <Container>
       {filter === TODO_STATUS.completed && (
