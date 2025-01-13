@@ -2,7 +2,8 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { css, Global } from "@emotion/react";
-import TodoCreator from "../features/todo/TodoCreator";
+import TodoCreator from "@features/todo/TodoCreator";
+import TodoList from "@features/todo/TodoList";
 
 interface Props {}
 
@@ -17,12 +18,15 @@ const TodoUserListPage = ({}: Props) => {
             padding: 0;
             height: 100%;
             width: 100%;
+            background-color: #f5f5f5;
           }
         `}
       />
       <div>
         <Title>To Do List</Title>
         <TodoCreator />
+
+        <TodoList />
       </div>
     </Container>
   );
@@ -34,7 +38,6 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f5f5f5;
 `;
 
 const Title = styled.h1`
