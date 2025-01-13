@@ -1,13 +1,17 @@
-import { useRecoilState } from "recoil";
-import { todoListState } from "../../recoil/todo";
+import { useRecoilValue } from "recoil";
+import { todoListState } from "@recoil/todo";
 import TodoItem from "./TodoItem";
+import TodoListFilter from "./TodoListFilter";
+import TodoListCount from "./TodoListCount";
 import styled from "@emotion/styled";
 
 export default function TodoList() {
-  const [todoList, setTodoList] = useRecoilState(todoListState);
+  const todoList = useRecoilValue(todoListState);
 
   return (
     <Container>
+      <TodoListFilter />
+      <TodoListCount />
       <TodoItems>
         {todoList.map((todoItem) => (
           <TodoItem key={todoItem.id} item={todoItem} />

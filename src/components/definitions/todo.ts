@@ -4,11 +4,10 @@ export type TodoItemT = {
   isCompleted: boolean;
 };
 
-export const TodoState = {
-  all: "ALL",
-  completed: "To Do",
-  uncompleted: "Done",
+export const TODO_STATUS = {
+  all: "all",
+  uncompleted: "uncompleted",
+  completed: "completed",
 } as const;
 
-export type TodoStateT = KeyOf<typeof TodoState>;
-type KeyOf<T> = keyof T;
+export type TodoStatusT = (typeof TODO_STATUS)[keyof typeof TODO_STATUS];
