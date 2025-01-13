@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import useKeyComposing from "@hooks/useKeyComposing";
 
 type Props = {
   value: string;
@@ -19,6 +20,8 @@ export default function TextField({
   helperMessage,
   disabled = true,
 }: Props) {
+  const { isComposing, keyComposingEvents } = useKeyComposing();
+
   return (
     <div>
       <StyledInput
@@ -26,8 +29,9 @@ export default function TextField({
         value={value}
         placeholder={placeholder}
         onChange={changeHandler}
-        onKeyDown={keydownHandler}
+        onKeyDown={(e) => !isComposing && keydownHandler(e)}
         disabled={disabled}
+        {...keyComposingEvents}
       />
       {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
       {helperMessage && <HelperMessage>{helperMessage}</HelperMessage>}

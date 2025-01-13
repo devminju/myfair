@@ -35,7 +35,8 @@
       "@features/*": ["src/components/features/*"],
       "@pages/*": ["src/components/pages/*"],
       "@definitions/*": ["src/components/definitions/*"],
-      "@recoil/*": ["src/components/recoil/*"]
+      "@recoil/*": ["src/components/recoil/*"],
+      "@hooks/*": ["src/components/hooks/*"]
     }
   }
 }

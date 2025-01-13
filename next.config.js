@@ -10,6 +10,7 @@ module.exports = {
       "@pages": path.resolve(__dirname, "src/components/pages"),
       "@definitions": path.resolve(__dirname, "src/components/definitions"),
       "@recoil": path.resolve(__dirname, "src/components/recoil"),
+      "@hooks": path.resolve(__dirname, "src/components/hooks"),
     };
 
     return config;
