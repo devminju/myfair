@@ -10,7 +10,7 @@ export default function Todo() {
   const todoList = useRecoilValue(todoListState);
 
   return (
-    <Container>
+    <div>
       <TodoCreator />
       <List>
         <TodoListFilter />
@@ -21,25 +21,14 @@ export default function Todo() {
           ))}
         </TodoItems>
       </List>
-    </Container>
+    </div>
   );
 }
-
-const Container = styled.div`
-  height: 100%;
-  width: 100%;
-  shirnk: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-`;
 
 const List = styled.div`
   width: 737px;
   height: auto;
   min-height: 580px;
-  max-height: 65vh;
   padding: 32px;
   margin-top: 32px;
   border-radius: 24px;

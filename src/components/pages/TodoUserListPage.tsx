@@ -21,10 +21,10 @@ const TodoUserListPage = ({}: Props) => {
           }
         `}
       />
-      <Content>
+      <div>
         <Title>To Do List</Title>
         <TodoList />
-      </Content>
+      </div>
     </Container>
   );
 };
@@ -32,11 +32,9 @@ const TodoUserListPage = ({}: Props) => {
 const Container = styled.div`
   width: 100%;
   height: 100%;
-`;
-
-const Content = styled.div`
-  width: 100%;
-  height: 100%;
+  display: flex;
+  justify-content: safe center;
+  align-items: safe center;
   overflow: auto;
 `;
 
