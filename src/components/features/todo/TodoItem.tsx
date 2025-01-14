@@ -4,6 +4,7 @@ import { TodoItemT } from "@definitions/todo";
 import Checkbox from "@common/Checkbox";
 import DeleteButton from "@common/DeleteButton";
 import styled from "@emotion/styled";
+import { removeItemAtIndex, replaceItemAtIndex } from "@utils/todo";
 
 type Props = {
   item: TodoItemT;
@@ -63,11 +64,3 @@ button {
 }
 .
 `;
-
-function replaceItemAtIndex<T>(arr: T[], index: number, newItem: T): T[] {
-  return arr.map((item, i) => (i === index ? newItem : item));
-}
-
-function removeItemAtIndex<T>(arr: T[], index: number): T[] {
-  return arr.filter((_, i) => i !== index);
-}

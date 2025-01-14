@@ -11,6 +11,7 @@ module.exports = {
       "@definitions": path.resolve(__dirname, "src/components/definitions"),
       "@recoil": path.resolve(__dirname, "src/components/recoil"),
       "@hooks": path.resolve(__dirname, "src/components/hooks"),
+      "@utils": path.resolve(__dirname, "src/components/utils"),
     };
 
     return config;

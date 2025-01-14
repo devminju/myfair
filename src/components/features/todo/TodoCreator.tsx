@@ -2,6 +2,7 @@ import TextField from "@common/TextField";
 import { useState } from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { todoListState, todoListStatsState } from "@recoil/todo";
+import { generateUniqueId } from "@utils/todo";
 
 const LIMIT_LENGTH = 20; // 글자 수 20자 제한
 const LIMINT_UNCOMPLETE_COUNT = 10; // 처리가 안된 할 일 10개 제한
@@ -54,6 +55,3 @@ export default function TodoCreator() {
     />
   );
 }
-
-const generateUniqueId = () =>
-  `${Date.now()}-${Math.floor(Math.random() * 10000)}`;
