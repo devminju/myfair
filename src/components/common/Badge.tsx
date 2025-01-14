@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
 
-type BadgeProps = {
+type Props = {
   title: string;
   selected: boolean;
   clickHandler: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
-export default function Badge({ title, selected, clickHandler }: BadgeProps) {
+export default function Badge({ title, selected, clickHandler }: Props) {
   return (
     <StyledBadge selected={selected} onClick={clickHandler}>
       {title}

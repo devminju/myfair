@@ -1,7 +1,7 @@
 import { useRecoilState } from "recoil";
 import { todoListFilterState } from "@recoil/todo";
 import styled from "@emotion/styled";
-import Badge from "@components/Badge";
+import Badge from "@common/Badge";
 import { TodoStatusT, TODO_STATUS } from "@definitions/todo";
 
 const filters: TodoStatusT[] = Object.values(TODO_STATUS) as TodoStatusT[];

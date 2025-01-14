@@ -2,7 +2,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { css, Global } from "@emotion/react";
-import TodoList from "@features/todo/TodoList";
+import TodoList from "@features/todo";
 
 interface Props {}
 

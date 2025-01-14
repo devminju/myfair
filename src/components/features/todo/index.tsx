@@ -6,7 +6,7 @@ import TodoListCount from "./TodoListCount";
 import styled from "@emotion/styled";
 import TodoCreator from "./TodoCreator";
 
-export default function TodoList() {
+export default function Todo() {
   const todoList = useRecoilValue(todoListState);
 
   return (

@@ -5,7 +5,7 @@ module.exports = {
     config.resolve.alias = {
       ...config.resolve.alias,
       "@": path.resolve(__dirname, "src"),
-      "@components": path.resolve(__dirname, "src/components/components"),
+      "@common": path.resolve(__dirname, "src/components/common"),
       "@features": path.resolve(__dirname, "src/components/features"),
       "@pages": path.resolve(__dirname, "src/components/pages"),
       "@definitions": path.resolve(__dirname, "src/components/definitions"),

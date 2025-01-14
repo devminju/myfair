@@ -1,11 +1,11 @@
 import styled from "@emotion/styled";
 
-type CheckboxProps = {
+type Props = {
   changeHandler: (e: React.ChangeEvent<HTMLInputElement>) => void;
   checked: boolean;
 };
 
-export default function Checkbox({ checked, changeHandler }: CheckboxProps) {
+export default function Checkbox({ checked, changeHandler }: Props) {
   return (
     <StyledInput type="checkbox" checked={checked} onChange={changeHandler} />
   );
