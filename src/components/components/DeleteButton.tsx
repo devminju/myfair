@@ -8,7 +8,7 @@ type Props = {
 export default function DeleteButton({ deleteHandler }: Props) {
   return (
     <StyledButton onClick={deleteHandler}>
-      <Image src="/Close.svg" width={24} height={24} alt="delete" />
+      <Image src="/images/Close.svg" width={24} height={24} alt="delete" />
     </StyledButton>
   );
 }

@@ -1,8 +1,8 @@
 import { useRecoilState } from "recoil";
 import { todoListState } from "@recoil/todo";
 import { TodoItemT } from "@definitions/todo";
-import Checkbox from "../../components/Checkbox";
-import DeleteButton from "../../components/DeleteButton";
+import Checkbox from "@components/Checkbox";
+import DeleteButton from "@components/DeleteButton";
 import styled from "@emotion/styled";
 
 type Props = {

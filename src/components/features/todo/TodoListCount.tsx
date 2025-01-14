@@ -24,4 +24,7 @@ export default function TodoListCount() {
 
 const Container = styled.div`
   display: flex;
+  padding: 16px;
+  font-size: 20px;
+  fotn-weight: 400;
 `;
